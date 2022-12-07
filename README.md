@@ -2,13 +2,13 @@
 
 A docker-compose project with these servers:
   * webserver -- an nginx reverse proxy HTTPS server
-  * therahermnodejs -- a node express webserver for the domain therapeutichermeneutic.org (change to your own domain name)
+  * therahermnodejs -- a node express webserver for the domain solarwebgg.com (change to your own domain name)
   * certbot -- the certbot utility, which talks to [letsencrypt.org](https://letsencrypt.org) to automate the process of obtaining and renewing HTTPS certificates
   
 This project is based on an excellent [Digital Ocean tutorial](https://www.digitalocean.com/community/tutorials/how-to-secure-a-containerized-node-js-application-with-nginx-let-s-encrypt-and-docker-compose) by Kathleen Juell, so go there for details.
 
 ## Notes
-* change all occurrences of therapeutichermeneutic.org or theraherm to your own domain name
+* change all occurrences of solarwebgg.com or theraherm to your own domain name
 * `mkdir dhparam`, and create your own TLS certificate
 
       sudo openssl dhparam -out ./dhparam/example-dhparam-2048.pem 2048

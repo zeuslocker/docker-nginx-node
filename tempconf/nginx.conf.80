@@ -2,11 +2,11 @@ server {
         listen 80;
         listen [::]:80;
         
-        root /var/www/therapeutichermeneutic.org;
+        root /var/www/solarwebgg.com;
         index index.html index.htm index.nginx-debian.html;
 
 
-        server_name therapeutichermeneutic.org www.therapeutichermeneutic.org;
+        server_name solarwebgg.com www.solarwebgg.com;
 
         location / {
                 proxy_pass http://therahermnodejs:8181;
@@ -14,7 +14,7 @@ server {
 
         location ~ /.well-known/acme-challenge {
                 allow all;
-                root /var/www/therapeutichermeneutic.org;
+                root /var/www/solarwebgg.com;
         }
 }
 

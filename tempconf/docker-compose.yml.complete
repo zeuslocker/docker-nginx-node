@@ -3,7 +3,7 @@ version: '3'
 services:
   therahermnodejs:
     build:
-      context: ./therapeutichermeneutic.org
+      context: ./solarwebgg.com
       dockerfile: Dockerfile
     image: therahermnodejs
     container_name: therahermnodejs
@@ -21,7 +21,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - theraherm-root:/var/www/therapeutichermeneutic.org
+      - theraherm-root:/var/www/solarwebgg.com
       - ./nginx-conf:/etc/nginx/conf.d
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
@@ -37,10 +37,10 @@ services:
     volumes:
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
-      - theraherm-root:/var/www/therapeutichermeneutic.org
+      - theraherm-root:/var/www/solarwebgg.com
     depends_on:
       - webserver
-    command: certonly --dry-run --webroot --webroot-path=/var/www/therapeutichermeneutic.org --email jklemke@grox.com --agree-tos --no-eff-email -d therapeutichermeneutic.org -d www.therapeutichermeneutic.org
+    command: certonly --dry-run --webroot --webroot-path=/var/www/solarwebgg.com --email jklemke@grox.com --agree-tos --no-eff-email -d solarwebgg.com -d www.solarwebgg.com
 
 volumes:
   certbot-etc:
@@ -49,7 +49,7 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /home/admin/docker-nginx-node/therapeutichermeneutic.org/www
+      device: /home/admin/docker-nginx-node/solarwebgg.com/www
       o: bind
   dhparam:
     driver: local
